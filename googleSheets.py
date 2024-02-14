@@ -14,7 +14,6 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 def sheets():
   """Shows basic usage of the Sheets API.
-  Prints values from a sample spreadsheet.
   """
   creds = None
   # The file token.json stores the user's access and refresh tokens, and is
@@ -49,31 +48,31 @@ def sheets():
   return values     
 
 
-def upDateSheets(situacao,naf):
-    # Carrega as credenciais
+def upDateSheets(status,finalGrade):
+    # Load credentials
     creds = Credentials.from_authorized_user_file('token.json')
 
-    # Inicia o serviço do Google Sheets
+    # Initialize Google Sheets service
     service = build('sheets', 'v4', credentials=creds)
 
-    # Define o ID da planilha e a faixa de células para a situação (coluna G, linhas 4 a 27)
-    situacao_range = 'engenharia_de_software!G4:G27'
+    # Define the spreadsheet ID and cell range for status (column G, rows 4 to 27)
+    status_range = 'engenharia_de_software!G4:G27'
 
-    # Atualiza a situação
-    update_situacao = service.spreadsheets().values().update(
+    # Update status
+    update_status = service.spreadsheets().values().update(
         spreadsheetId='1G_-5eptKriUjYI34quNpjISDPC9VBgDf5ZI6_UD4yv8',
-        range=situacao_range,
+        range=status_range,
         valueInputOption='USER_ENTERED',
-        body={'values': situacao}
+        body={'values': status}
     ).execute()
 
-    # Define o ID da planilha e a faixa de células para o NAF (coluna H, linhas 4 a 27)
-    naf_range = 'engenharia_de_software!H4:H27'
+    # Define the spreadsheet ID and cell range for finalGrade (column H, rows 4 to 27)
+    finalGrade_range = 'engenharia_de_software!H4:H27'
 
-    # Atualiza o NAF
-    update_naf = service.spreadsheets().values().update(
+    # Update finalGrade
+    update_finalGrade = service.spreadsheets().values().update(
         spreadsheetId='1G_-5eptKriUjYI34quNpjISDPC9VBgDf5ZI6_UD4yv8',
-        range=naf_range,
+        range=finalGrade_range,
         valueInputOption='USER_ENTERED',
-        body={'values': naf}
+        body={'values': finalGrade}
     ).execute()
