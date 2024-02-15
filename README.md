@@ -19,7 +19,7 @@ Este arquivo é o ponto de entrada principal do projeto. Ele utiliza as funçõe
 ## Configuração e Execução
 
 1. Clone este repositório:
-  - https://github.com/prometheuslr/Desafio-de-codigo.git
+   - https://github.com/prometheuslr/Desafio-de-codigo.git
 
 
 2. Instale as dependências necessárias:
