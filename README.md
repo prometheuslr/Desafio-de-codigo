@@ -19,11 +19,11 @@ Este arquivo é o ponto de entrada principal do projeto. Ele utiliza as funçõe
 ## Configuração e Execução
 
 1. Clone este repositório:
-   -https://github.com/prometheuslr/Desafio-de-codigo.git
+  - https://github.com/prometheuslr/Desafio-de-codigo.git
 
 
 2. Instale as dependências necessárias:
-   -pip install pandas google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+   - pip install pandas google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
 
 3. Configure as credenciais do Google Sheets:
 
@@ -31,7 +31,7 @@ Este arquivo é o ponto de entrada principal do projeto. Ele utiliza as funçõe
    - Após a primeira execução, o script irá solicitar que você faça login em sua conta do Google e autorize o acesso à planilha. Após autorizar, o arquivo `token.json` será gerado automaticamente para armazenar suas credenciais de acesso.
 
 4. Execute o script principal:
-   -python main.py
+   - python main.py
 
 Isso irá processar os dados da planilha, calcular os status e as notas finais dos alunos e atualizar a planilha com essas informações.
 
